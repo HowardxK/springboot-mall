@@ -4,6 +4,7 @@ import com.howard.springbootmall.dto.ProductQueryParams;
 import com.howard.springbootmall.dto.ProductRequest;
 import com.howard.springbootmall.model.Product;
 
+import java.util.Iterator;
 import java.util.List;
 
 public interface ProductDao {
@@ -14,6 +15,8 @@ public interface ProductDao {
     Integer createProduct(ProductRequest productRequest);
 
     void updateProduct(Integer productId, ProductRequest productRequest);
+
+    void updateStock(Integer productId, Integer stock);
 
     void deleteProductById(Integer productId);
 }
